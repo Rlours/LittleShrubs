@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat:wght@100;200;300;400;500;700&family=Poppins:wght@100&family=Roboto:wght@100;300;400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+
+  box-sizing: border-box;
+  background-color: rgb(196, 192, 192);
+}
+.container {
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 1.7;
+  width: 95vw;
+  height: 100vh;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 1fr 1fr 1fr;
+}
+header {
+  grid-area: header;
+  height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  max-height: 8rem;
+  justify-content: space-between;
+  align-items: center;
+}
+main {
+  grid-area: main;
+  display: grid;
+  height: calc(100vh - 16rem);
+  grid-template-areas:
+    "sale"
+    "components";
+  grid-template-rows: 1fr 1fr;
+  margin-bottom: 1.5rem;
+}
+#top {
+  grid-area: sale;
+  background-image: url(source/photos_background/hendrik-cornelissen--qrcOR33ErA-unsplash.jpg);
+  border-radius: 2rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20rem;
+}
+
+#bottom {
+  grid-area: components;
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+header > div > img {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 2rem;
+}
+footer img {
+  width: 4rem;
+  height: 4rem;
+}
+nav > ul {
+  list-style: none;
+  display: flex;
+  margin-right: 2rem;
+}
+nav > ul > li {
+  padding-right: 3rem;
+}
+nav > ul > li > a {
+  text-decoration: none;
+  color: rgb(2, 29, 20);
+  transition-property: color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-out;
+}
+nav > ul > li > a:hover {
+  color: rgb(108, 203, 122);
+}
+h1 {
+  padding-left: 5rem;
+  padding-top: 5rem;
+  color: white;
+  font-size: 3.5rem;
+}
+#top > article > p {
+  color: white;
+  padding-top: 5rem;
+  padding-left: 5rem;
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+#copyright {
+  font-size: 1.5rem;
+  margin-right: 2rem;
+}
+/*    Styling Card ( Components ) */
+
+.card {
+  width: min-content;
+  height: min-content;
+  background-color: #d4f7a7;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 2rem;
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 24px;
+  /* margin-bottom: 10px; */
+}
+
+.card-image {
+  width: 40rem;
+  height: 20rem;
+  /* margin-bottom: 10px; */
+}
+
+.card-description {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+/*    Styling Card End */
